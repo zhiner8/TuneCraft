@@ -4,6 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TuneCraft</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="craft.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar">
+      <a href="/history" class="nav-link">History</a>
+      <a href="/suggestions" class="nav-link">Today’s Suggestions</a>
+    </nav>
+    <h1 class="header">TuneCraft</h1>
+    <p class="spiel">Music that fits your mood — crafted just for you.</p>
+    <p class="spiel">
+      TuneCraft takes how you're feeling and turns it into a personalized song
+      or playlist recommendation using Spotify's API. Whether you're hyped,
+      mellow, or somewhere in between, we match your vibe with the perfect
+      sound.
+    </p>
+    <p class="spiel">
+      Start by entering your user ID. If you haven’t visited today, we’ll guide
+      you through a quick mood check. From genre preferences to how loud or
+      niche you like your music, we’ll ask a few easy questions — then craft
+      your musical match. You can explore today’s recommendations or look back
+      at your recent history, all in one place. No stress. Just good music.
+    </p>
+    <div class="input-container">
+      <input type="text" class="id-input" placeholder="User ID" />
+    </div>
+    <div class="craft-container">
+      <button class="craft-button">Craft</button>
+    </div>
+  </body>
 </html>

@@ -5,3 +5,90 @@
   --spotify-medium-gray: #535353;
   --spotify-light-gray: #b3b3b3;
 }
+body {
+  background-color: var(--spotify-black);
+  margin: 0;
+  height: 100%;
+}
+
+/* HOME PAGE START */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--spotify-green);
+  font-size: 5rem;
+}
+.spiel {
+  color: var(--spotify-light-gray);
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  text-align: center; /* center text lines */
+  margin-left: 10rem;
+  margin-right: 10rem;
+  font-size: 1.5rem;
+}
+.navbar {
+  background-color: var(--spotify-dark-gray);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--spotify-light-gray);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--spotify-green);
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.id-input {
+  color: var(--spotify-light-gray);
+  background-color: var(--spotify-black);
+  border: #1db954 0.25rem solid;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  border-radius: 8px;
+}
+.craft-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.craft-button {
+  background-color: var(--spotify-green);
+  color: var(--spotify-dark-gray);
+  border: none;
+  border-radius: 10px; /* makes it pill-shaped */
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.craft-button:hover {
+  background-color: #1ed760;
+  transform: scale(1.05);
+}
+:focus {
+  outline: none;
+}
+/* HOME PAGE END*/
