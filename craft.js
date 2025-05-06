@@ -4,7 +4,8 @@ const path = require("path");
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "templates"))
 
-const PORT = process.env.PORT || 10000;  // Default to 10000 if PORT is not set
+const PORT = process.env.PORT || 10000;  
+
 
 app.get('/', (req, res) => {
   res.render("craft")
