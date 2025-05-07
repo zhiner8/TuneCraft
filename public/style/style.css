@@ -92,3 +92,54 @@ body {
   outline: none;
 }
 /* HOME PAGE END*/
+
+/* SELECT MOOD START */
+
+label {
+  color: var(--spotify-light-gray);
+  width: fit-content;
+  text-align: center;
+  font-size: 30px;
+}
+
+input[type="range"] {
+  width: 100%;
+  color: var(--spotify-green);
+  background: var(--spotify-green);
+}
+
+select {
+  margin: 1rem;
+  width: 100px;
+  color: var(--spotify-black);
+}
+
+.slider-group {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20%;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  height: 200px;
+}
+
+.select-row {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  justify-self: center;
+}
+
+.slider-icon {
+  width: 120px;
+}
+
+
+

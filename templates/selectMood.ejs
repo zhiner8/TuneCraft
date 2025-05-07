@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TuneCraft</title>
+        <link rel="stylesheet" href="../style/style.css" type="text/css">
+    </head>
+    <body>
+        <h1 class="header">Today's Mood</h1>
+        <form>
+            <div class="slider-group">
+                <div class="slider-row">
+                    <label><img src='../images/sad-face.png' alt="Sad face" class="slider-icon"></label><input type="range" name="mood" id="moodSlider"><label><img src='../images/happy-face.png' alt="Happy face" class="slider-icon"></label>
+                    <br>
+                </div>
+                <label>How are you feeling today?</label>
+                <br>
+            </div>
+
+            <div class="select-row">
+                <select name="genre" id="genre">
+                    <option value="pop">Pop</option>
+                    <option value="classic">Classic</option>
+                    <option value="rock">Rock</option>
+                    <option value="rap">Rap</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="funk">Funk</option>
+                </select>
+                <br>
+                <label>Which genre are you in the mood for?</label>
+                <br>
+            </div>
+
+
+            <div class="slider-group">
+                <div class="slider-row">
+                    <input type="range" name="instrumentalness" id="instrumentalnessSlider">
+                    <br>
+                </div>
+                <label>How much do you like instrumentals in your music?</label>
+                <br>
+            </div>
+            
+            <div class="slider-group">
+                <div class="slider-row">
+                    <input type="range" name="volume" id="volumeSlider">
+                    <br>
+                </div>
+                <label>How loud do you prefer your music to be?</label>
+                <br>
+            </div>
+            
+            <div class="slider-group">
+                <div class="slider-row">
+                    <input type="range" name="popularity" id="popularitySlider">
+                    <br>
+                </div>
+                <label>How mainstream is your music taste?</label>
+                <br>
+            </div>
+        </form>
+    </body>
+</html>
