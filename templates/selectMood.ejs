@@ -8,57 +8,59 @@
     </head>
     <body>
         <h1 class="header">Today's Mood</h1>
-        <form>
+        <form action="/suggestions" method="post">
             <div class="slider-group">
-                <div class="slider-row">
-                    <label><img src='../images/sad-face.png' alt="Sad face" class="slider-icon"></label><input type="range" name="mood" id="moodSlider"><label><img src='../images/happy-face.png' alt="Happy face" class="slider-icon"></label>
-                    <br>
+
+                <div class="slider-col">
+                    <label><img src='../images/happy-face.png' alt="Happy face" class="slider-icon"></label>
+                    <input type="range" orient='vertical' name="mood" id="moodSlider">
+                    <label><img src='../images/sad-face.png' alt="Sad face" class="slider-icon"></label>
+                    <label>How are you feeling today?</label>
                 </div>
-                <label>How are you feeling today?</label>
-                <br>
-            </div>
-
-            <div class="select-row">
-                <select name="genre" id="genre">
-                    <option value="pop">Pop</option>
-                    <option value="classic">Classic</option>
-                    <option value="rock">Rock</option>
-                    <option value="rap">Rap</option>
-                    <option value="jazz">Jazz</option>
-                    <option value="funk">Funk</option>
-                </select>
-                <br>
-                <label>Which genre are you in the mood for?</label>
-                <br>
-            </div>
-
-
-            <div class="slider-group">
-                <div class="slider-row">
-                    <input type="range" name="instrumentalness" id="instrumentalnessSlider">
-                    <br>
+                
+                <div class="slider-col">
+                    <div class="select-container">
+                        <select name="genre" id="genre">
+                            <option value="pop">Pop</option>
+                            <option value="classic">Classic</option>
+                            <option value="rock">Rock</option>
+                            <option value="rap">Rap</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="funk">Funk</option>
+                        </select>                    
+                    </div>
+                    <div class="whitespace"></div>
+                    <label>Genre</label>
                 </div>
-                <label>How much do you like instrumentals in your music?</label>
-                <br>
+
+                <div class="slider-col">
+                    <label><img src='../images/instruments.png' alt="Instruments" class="slider-icon"></label>
+                    <input type="range" orient="vertical" name="instrumentalness" id="instrumentalnessSlider">
+                    <label><img src='../images/microphone.png' alt="Microphone" class="slider-icon"></label>
+                    <label>Instrumental Level</label>
+                </div>
+                
+                <div class="slider-col">
+                    <label><img src='../images/high-volume.png' alt="High volume" class="slider-icon"></label>
+                    <input type="range" orient='vertical' name="volume" id="volumeSlider">
+                    <label><img src='../images/low-volume.png' alt="Low volume" class="slider-icon"></label>
+                    <label>Volume</label>
+                </div>
+                
+            
+                <div class="slider-col">
+                    <label><img src='../images/dance.png' alt="Popular" class="slider-icon"></label>
+                    <input type="range" orient='vertical' name="danceability" id="popularitySlider">
+                    <label><img src='../images/calm.png' alt="Niche" class="slider-icon"></label>
+                    <label>Danceability</label>
+                </div>
+                
             </div>
             
-            <div class="slider-group">
-                <div class="slider-row">
-                    <input type="range" name="volume" id="volumeSlider">
-                    <br>
-                </div>
-                <label>How loud do you prefer your music to be?</label>
-                <br>
+            <div class="submit-container">
+                <input type="submit" class="submit" value="Get recommendations!">
             </div>
-            
-            <div class="slider-group">
-                <div class="slider-row">
-                    <input type="range" name="popularity" id="popularitySlider">
-                    <br>
-                </div>
-                <label>How mainstream is your music taste?</label>
-                <br>
-            </div>
+    
         </form>
     </body>
 </html>
