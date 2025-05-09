@@ -12,9 +12,9 @@
             <div class="slider-group">
 
                 <div class="slider-col">
-                    <label><img src='../images/happy-face.png' alt="Happy face" class="slider-icon"></label>
-                    <input type="range" orient='vertical' name="mood" id="moodSlider">
-                    <label><img src='../images/sad-face.png' alt="Sad face" class="slider-icon"></label>
+                    <img src='../images/happy-face.png' alt="Happy face" class="slider-icon">
+                    <input type="range" orient='vertical' name="valence" id="moodSlider" min="0" max="1" step="0.01">
+                    <img src='../images/sad-face.png' alt="Sad face" class="slider-icon">
                     <label>How are you feeling today?</label>
                 </div>
                 
@@ -34,24 +34,24 @@
                 </div>
 
                 <div class="slider-col">
-                    <label><img src='../images/instruments.png' alt="Instruments" class="slider-icon"></label>
-                    <input type="range" orient="vertical" name="instrumentalness" id="instrumentalnessSlider">
-                    <label><img src='../images/microphone.png' alt="Microphone" class="slider-icon"></label>
+                    <img src='../images/instruments.png' alt="Instruments" class="slider-icon">
+                    <input type="range" orient="vertical" name="instrumentalness" id="instrumentalnessSlider" min="0" max="1" step="0.01">
+                    <img src='../images/microphone.png' alt="Microphone" class="slider-icon">
                     <label>Instrumental Level</label>
                 </div>
                 
                 <div class="slider-col">
-                    <label><img src='../images/high-volume.png' alt="High volume" class="slider-icon"></label>
-                    <input type="range" orient='vertical' name="volume" id="volumeSlider">
-                    <label><img src='../images/low-volume.png' alt="Low volume" class="slider-icon"></label>
+                    <img src='../images/high-volume.png' alt="High volume" class="slider-icon">
+                    <input type="range" orient='vertical' name="loudness" id="volumeSlider" min="-60" max="0" step="0.1">
+                    <img src='../images/low-volume.png' alt="Low volume" class="slider-icon">
                     <label>Volume</label>
                 </div>
                 
             
                 <div class="slider-col">
-                    <label><img src='../images/dance.png' alt="Popular" class="slider-icon"></label>
-                    <input type="range" orient='vertical' name="danceability" id="popularitySlider">
-                    <label><img src='../images/calm.png' alt="Niche" class="slider-icon"></label>
+                    <img src='../images/dance.png' alt="Popular" class="slider-icon">
+                    <input type="range" orient='vertical' name="danceability" id="popularitySlider" min="0" max="1" step="0.01">
+                    <img src='../images/calm.png' alt="Niche" class="slider-icon">
                     <label>Danceability</label>
                 </div>
                 
