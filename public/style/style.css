@@ -65,6 +65,7 @@ body {
   padding: 0.5rem 1rem;
   width: 300px;
   border-radius: 8px;
+  font-family: "Cal Sans", sans-serif;
 }
 .craft-container {
   display: flex;
@@ -83,6 +84,7 @@ body {
   padding-bottom: 1rem;
   font-size: 1.5rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Cal Sans", sans-serif;
 }
 
 .craft-button:hover {
