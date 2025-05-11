@@ -37,6 +37,9 @@ app.get('/', (req, res) => {
 });
 
 app.get("/selectMood", (req, res) => {
+  user = req.query.userId
+  
+  // if user has no entries today, direct to form
   res.render("selectMood");
 });
 
