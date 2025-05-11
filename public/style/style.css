@@ -109,6 +109,7 @@ input[type="range"][orient='vertical'] {
   -webkit-appearance: slider-vertical;
   height: 15rem;
   width: 20px;
+  accent-color: var(--spotify-green);
 }
 
 
