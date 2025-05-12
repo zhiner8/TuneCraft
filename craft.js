@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const axios = require('axios');
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "templates"))
 const bodyParser = require("body-parser");
@@ -12,7 +13,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 /* INITIALIZE SEED SONGS */
 seed_songs = new Map();
-seed_songs.set("sad pop", "1zwMYTA5nlNjZxYrvBB2pV");           // Someone like you; Adele
+seed_songs.set("sad pop", "7qEHsqek33rTcFNT9PFqLf");           // Someone you loved; Lewis Capaldi
 seed_songs.set("neutral pop", "3pHkh7d0lzM2AldUtz2x37");       // The Archer; Taylor Swift
 seed_songs.set("happy pop", "4kbj5MwxO1bq9wjT5g9HaA");         // Shut up and dance; Walk the Moon
 seed_songs.set("sad classic", "7nHvS6UUhz2gJhj8TIROLX");       // Adagio for Strings; Samuel Barber
@@ -32,15 +33,59 @@ seed_songs.set("neutral funk", "2x1LQq8lsUzAA2wNj8yjC9");      // Pick Up the Pi
 seed_songs.set("happy funk", "5XeSAezNDk9tuw3viiCbZ3") ;       // Get Up Offa That Thing; James Brown
 
 
+user = ""
+
 app.get('/', (req, res) => {
   res.render("craft");
 });
 
 app.get("/selectMood", (req, res) => {
-  user = req.query.userId
+  user = req.query.userId;
+  console.log(user);
   
-  // if user has no entries today, direct to form
   res.render("selectMood");
+});
+
+app.post("/suggestions", (req, res) => {
+  
+  mood = ""
+  if (req.body.valence >= 0.66) {
+    mood = "happy"
+  } else if (req.body.valence >= 0.33) {
+    mood = "neutral"
+  } else {
+    mood = "sad"
+  }
+  song_type = mood + " " + req.body.genre;
+  seed_song = seed_songs.get(song_type);
+  console.log(song_type);
+
+  // Send API request
+  let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: `https://api.reccobeats.com/v1/track/recommendation?size=100&seeds=${seed_song}&danceability=${req.body.danceability}&instrumentalness=${req.body.instrumentalness}&loudness=${req.body.loudness}&valence=${req.body.valence}`,
+    headers: { 
+      'Accept': 'application/json'
+    }
+  };
+
+  (async () => {
+    try {
+      const response = await axios.request(config);
+      const data = response.data;
+      //console.log(data);
+      songs = data.content;
+      songs.sort((a, b) => b.popularity - a.popularity);
+      songs = songs.slice(0, 10);
+      const songRec = songs[Math.floor(Math.random() * songs.length)];
+      console.log(songRec)
+
+    } catch (e) {
+      console.log(e)
+    }
+  })();
+
 });
 
 
