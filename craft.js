@@ -74,7 +74,7 @@ app.post("/suggestions", (req, res) => {
     try {
       const response = await axios.request(config);
       const data = response.data;
-      //console.log(data);
+      console.log(data);
       songs = data.content;
       songs.sort((a, b) => b.popularity - a.popularity);
       songs = songs.slice(0, 10);
