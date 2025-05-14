@@ -1,10 +1,7 @@
-# TuneCraft
-
-CMSC335 Final Project
-
-Submitted by: Rose Smith (directory id: superterp)
-Group Members: Rose Smith (superterp), Peter Santos (pmegaterp)
-App Description: Allow users to find images, songs of an author and store the results.
-YouTube Video Link: https://www.youtube.com/MyAmazingAPP
-APIs: VideoApp (http:notrealvideoapp.what), SoundApp (http:notreadlsoundapp.what)
-Contact Email: superterp@notreal.address.what
+**Submitted by:** XXX
+**Group Members:** Zachary Hiner (zhiner), Dominick, Bemi
+**App Description:** Users are provided song suggestions based on vibe, genre, danceability, instrumentals, and volume. Users can then access their previous suggestions as well as their current suggestion.
+**Youtube Video Link:** XXX
+**APIs:** XXX
+**Contact Email:** XXX
+**Deployed App Link:** https://tunecraft.onrender.com/
