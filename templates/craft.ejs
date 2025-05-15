@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TuneCraft</title>
     <link rel="stylesheet" href="../style/style.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <a href="/history" class="nav-link">History</a>
-      <a href="/suggestions" class="nav-link">Today’s Suggestions</a>
-    </nav>
     <h1 class="header">TuneCraft</h1>
     <p class="spiel">Music that fits your mood — crafted just for you.</p>
     <p class="spiel">
@@ -31,19 +30,25 @@
     </p>
 
     <div class="input-container">
-      <input type="text" class="id-input" id="userIdInput" placeholder="User ID" />
+      <input
+        type="text"
+        class="id-input"
+        id="userIdInput"
+        placeholder="User ID"
+      />
     </div>
     <div class="craft-container">
       <button class="craft-button" onclick="redirectWithUserId()">Craft</button>
     </div>
   </body>
 
-
   <script>
     function redirectWithUserId() {
-      const userId = document.getElementById('userIdInput').value.trim();
+      const userId = document.getElementById("userIdInput").value.trim();
       if (userId) {
-        window.location.href = `/selectMood?userId=${encodeURIComponent(userId)}`;
+        window.location.href = `/selectMood?userId=${encodeURIComponent(
+          userId
+        )}`;
       } else {
         alert("Please enter a User ID.");
       }
