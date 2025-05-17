@@ -126,7 +126,7 @@ app.post("/suggestions", (req, res) => {
       //Declaring variables to create table and clean up data
       /************************/
       let reccomendationsTable = `
-      <table border="1" class="spiel">
+      <table border="1">
         <tr>
           <th>Song</th>
           <th>Artist</th>
@@ -148,8 +148,9 @@ app.post("/suggestions", (req, res) => {
         cleanedSongRecs[i++] = {
           song: song.trackTitle,
           artists: Artists,
+          href: song.href
         };
-        reccomendationsTable += `<tr><td>${song.trackTitle}</td><td>${Artists}</td></tr>`;
+        reccomendationsTable += `<tr><td><a href="${song.href}">${song.trackTitle}</a></td><td>${Artists}</td></tr>`;
       }
       reccomendationsTable += `</table>`;
 
@@ -196,7 +197,7 @@ app.get("/history", async (req, res) => {
 
   for (entry of records) {
     for (rec of entry.songRecs) {
-      historyTable += `<tr><td>${rec.song}</td><td>${rec.artists}</td><td>${entry.createdAt}</td></tr>`;
+      historyTable += `<tr><td><a href="${rec.href}">${rec.song}</a></td><td>${rec.artists}</td><td>${entry.createdAt}</td></tr>`;
     }
   }
   historyTable += `</table>`;
