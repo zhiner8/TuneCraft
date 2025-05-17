@@ -71,9 +71,8 @@ seed_songs.set("happy funk", "5XeSAezNDk9tuw3viiCbZ3"); // Get Up Offa That Thin
 
 user = "";
 
-app.get("/", (req, res) => {
-  res.render("craft");
-});
+const craftRouter = require("./routes/route");
+app.use("/", craftRouter);
 
 app.get("/selectMood", (req, res) => {
   user = req.query.userId;
