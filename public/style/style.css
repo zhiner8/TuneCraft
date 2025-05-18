@@ -49,6 +49,11 @@ body {
   color: var(--spotify-green);
 }
 
+a:hover {
+  color: var(--spotify-green);
+}
+
+
 .input-container {
   display: flex;
   justify-content: center;
@@ -220,15 +225,14 @@ table {
   border-collapse: collapse;
 }
 
+table a {
+text-decoration: none;
+}
+
 th, td {
   padding: 1rem;
   text-align: center;
   border: 1px solid var(--spotify-light-gray);
-}
-
-a {
-  text-decoration: underline;
-  color: var(--spotify-light-gray);
 }
 
 .recommendationTable {
