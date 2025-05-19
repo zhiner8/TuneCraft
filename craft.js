@@ -58,7 +58,7 @@ seed_songs.set("neutral classic", "6kf7ZCJjEbjZXikivKOsvJ"); // Claire de Lune; 
 seed_songs.set("happy classic", "5rk76Ugo6ZWsciJwvCQ4vH"); // Spring; Vivaldi
 seed_songs.set("sad rock", "5Xak5fmy089t0FYmh3VJiY"); // Black; Pearl Jam
 seed_songs.set("neutral rock", "5UWwZ5lm5PKu6eKsHAGxOk"); // Everlong; Foo Fighters
-seed_songs.set("happy rock", "7hQJA50XrCWABAu5v6QZ4i"); // Don't Stop Me Now; Pearl Jam
+seed_songs.set("happy rock", "65OR4ywy8Cgs3FDHK82Idl"); // Higher Power; Cold Play
 seed_songs.set("sad rap", "561jH07mF1jHuk7KlaeF0s"); // Mockingbird; Eminem
 seed_songs.set("neutral rap", "7KXjTSCq5nL1LoYtL7XAwS"); // HUMBLE; Kendrick Lamar
 seed_songs.set("happy rap", "4cnqxdE2opmhp7MwkvhkAJ"); // Good Day; Nappy Roots
@@ -188,7 +188,7 @@ app.get("/history", async (req, res) => {
   //console.log(records)
 
   let historyTable = `
-      <table border="1" class="spiel">
+      <table border="1">
         <tr>
           <th>Song</th>
           <th>Artist</th>
